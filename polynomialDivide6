@@ -38,7 +38,8 @@ class polynomialDivide6 {
       q[N-1] = a[N]/b[1];
       System.out.print("\nFinal answer is: ");
       if(q[N-1] != 1) System.out.print(q[N-1]);
-      System.out.print("x^"+(N-1)); //prints the first term of the final answer
+      System.out.print("x"); //prints the first term of the final answer
+      if((N-1) != 1 & (N-1) != 0) System.out.print("^" + (N-1));
       for(int i = N-2; i >= 0; i--) {
         q[i] = recursive_answer(N, a, b, q, i);
         if(q[i] > 0) System.out.print("+"); //if the term is greater than zero, print a + sign
